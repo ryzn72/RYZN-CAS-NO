@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYZN BET - Çok Yakında</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0e14;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* PARLAYAN AMBİYANS EFEKTLERİ */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 59, 48, 0.12);
+            border-radius: 50%;
+            filter: blur(80px);
+            top: 20%;
+            left: 30%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: rgba(0, 122, 255, 0.12);
+            border-radius: 50%;
+            filter: blur(80px);
+            bottom: 20%;
+            right: 30%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        /* ANA KUTU */
+        .container {
+            text-align: center;
+            padding: 45px 35px;
+            background-color: #111622;
+            border: 1px solid #1f293d;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+            max-width: 480px;
+            width: 90%;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* LOGO ALANI */
+        .logo {
+            font-size: 52px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #ff3b30, #ff9500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 25px;
+            text-shadow: 0 0 35px rgba(255, 59, 48, 0.35);
+        }
+
+        /* YAPIM AŞAMASI UYARI BAŞLIĞI */
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+        }
+
+        /* AÇIKLAMA METNİ */
+        .description {
+            font-size: 15px;
+            color: #8a99ad;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        /* DÖNEN AKILLI SİMGE */
+        .loader-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 35px;
+        }
+
+        .spinner {
+            width: 45px;
+            height: 45px;
+            border: 3px solid rgba(255, 59, 48, 0.1);
+            border-radius: 50%;
+            border-top-color: #ff3b30;
+            animation: spin 1.2s ease-in-out infinite;
+            box-shadow: 0 0 15px rgba(255, 59, 48, 0.2);
+        }
+
+        /* DAVET BUTONU */
+        .tg-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: #0088cc;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 32px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 16px;
+            width: 100%;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 136, 206, 0.4);
+        }
+
+        .tg-button:hover {
+            background-color: #00a2f3;
+            box-shadow: 0 0 30px rgba(0, 136, 206, 0.7);
+            transform: translateY(-3px);
+        }
+
+        /* HAREKET ANİMASYONLARI */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes float {
+            0%, 100__% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- LOGO -->
+        <div class="logo">RYZN BET</div>
+        
+        <!-- BAŞLIK -->
+        <div class="title">Sitemiz Kullanıma Aktif Değildir</div>
+        
+        <!-- AÇIKLAMA -->
+        <div class="description">
+            Sizlere daha kaliteli ve güvenilir bir altyapı sunabilmek adına çalışmalarımız devam etmektedir. Tüm güncel duyurular, etkinlikler ve bonuslar için resmi topluluk kanalımıza katılın.
+        </div>
+
+        <!-- YÜKLENİYOR EFEKTİ -->
+        <div class="loader-box">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- TELEGRAM UYGULAMASINI DOĞRUDAN TETİKLEYEN EN GÜVENLİ BUTON -->
+        <a href="tg://join?invite=OnjxnIWkDgVjZWRk" class="tg-button">
+            💬 RYZN CASİNO Grubuna Katıl
+        </a>
+
+    </div>
+
+</body>
+</html>
